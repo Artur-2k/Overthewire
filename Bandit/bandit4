@@ -1,0 +1,14 @@
+Just like the level before the we will need to look on the inhere directory and look for a file that has only human-readble content.
+Looking inside the contents of the inhere directory we could see a bunch of files starting with -
+We could read the contents of each file and check for the password but a better approach is to use the command file and see the type of files we are dealing with and we wiil find out that one of the files has the tag ASCII text and if we read it we will get the password to the next level
+To make sure we can read the contents of the -file07 we will need to go arount the option flag -. we can use the path, the more command or the end-of-options marker -- that indicates the shell that all following arguments should be treated as positional parameters (i.e., arguments to the command) and not as options (flags).
+
+ssh bandit4@bandit.labs.overthewire.org -p 2220
+
+cd inhere
+ls -la
+file -- *
+more -file07
+
+password
+4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw

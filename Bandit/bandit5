@@ -1,0 +1,23 @@
+In this level we will have to look for a file in the inhere directory that has the folloing proprieties:
+
+    human-readable
+    1033 bytes in size
+    not executable
+
+Looking inside the folder we see we have a lot of sub directories with each one having multiple files so looking one by one isn't optimal.
+We now can use the command find to look for matches using the proprieties they gave us
+
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+
+cd inhere
+ls -la
+find -type f -size 1033c ! -executable -exec file {} \; | grep "ASCII text"
+more ./maybehere07/.file2
+
+password:
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+
+Notes for self:
+-exec file {} \; | grep "ASCII text"
+-exec lets find execute a command (file) and each corresponding file will be put on the place of the placeholder {}. The \; will tell the end of the command (\ is necessary so shell doesn't interpret it as a special character)

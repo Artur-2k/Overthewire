@@ -1,0 +1,27 @@
+In this level we will have to look for the password in the contents of data.txt
+The password is next to a n number of equals.
+The contents of data have a lot of non readable characters
+
+To solve this problem we can use the strings command that filters the human-readable contents and piping it's output to grep and find a match for any number of equals to get that FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+
+
+strings data.txt | grep "=.*"
+strings data.txt | grep '=\{2,\}' // since it says "preceded by several ‘=’ characters." we can assume it's more than two and filter out the secret message with this regex too
+
+password:
+FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+Note to self: Regular expression
+=.* means:
+	=: This matches the literal equals sign character. It looks for an = in the string.
+	.: This matches any single character (except for a newline).
+	*: This is a quantifier that means "zero or more" of the preceding element. In this case, it means "zero or more of any character."
+
+=\{2,\} means:
+=: This matches the literal equals sign (=) character.
+\{2,\}: This is a quantifier that modifies the preceding character or group (in this case, the equals sign =). The \{2,\} means "match the preceding character 2 or more times":
+	\{ and \}: These curly braces are used for quantifying in regular expressions.
+    2,: This means the pattern should match at least 2 occurrences (and it can match more than 2).
+
+	

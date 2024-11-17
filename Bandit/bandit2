@@ -1,0 +1,14 @@
+To solve this level we need to open the contents of a file named "spaces in this filename".
+The trick for this one is just to interpret the spaces in the filename as literal spaces and not as a token separator
+
+There are a few ways to go around this problem.
+Quoting: quoting will expand regular spaces into it's literal form so spaces won't be used to tokenize this filename
+Backslash: \ is an escape character that is used to include special characters reserved for some functionality (such as a token separator in case of spaces)
+
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+
+cat "spaces in this filename"
+cat spaces\ in\ this\ filename
+
+password:
+MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx

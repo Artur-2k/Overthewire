@@ -1,0 +1,12 @@
+To complete this level:
+
+I just needed to login as bandit0 with the password given (bandit0) to bandit.labs.overthewire.org with the port 2220 using ssh.
+
+Then to get the password to the next level I had to read the contents of the file readme
+
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+
+cat readme
+
+password:
+ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If

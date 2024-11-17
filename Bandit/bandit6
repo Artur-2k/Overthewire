@@ -1,0 +1,18 @@
+To solve this level we now have to do the samething but instead of looking in the inhere directory we will have to look in the entire server for a file with the following properties:
+
+
+    owned by user bandit7
+    owned by group bandit6
+    33 bytes in size
+
+We will use the same command as before with some different options now
+
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+
+find / -type f -user bandit7 -group bandit6 -size33 2>&1 | grep -v "Permission denied"
+more /var/lib/dpkg/info/bandit7.password
+
+password:
+morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+Note to self: 2>&1 (>& = "redirect to") will redirect the stderr to stdout so we can filter out the permission denined errors on find with grep.

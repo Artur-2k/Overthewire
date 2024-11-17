@@ -1,0 +1,14 @@
+ Dashed filenames
+
+ Dash has a special meaning depending on context and a dashed filename could be missinterpreted.
+ To solve this problem we have some ways to go around those special meanings
+ We could use the path to the file (/path/still/path/- or ./-), use commands that don't create these types of conflicts (like more, for example)
+
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+
+ cat ./-
+ more -
+
+ Either one of these commands will provide the password for the next level
+ password:
+ 263JGJPfgU6LtdEvgfWU1XP5yac29mFx

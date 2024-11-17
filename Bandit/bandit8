@@ -1,0 +1,11 @@
+To solve this level we will need to check the only line of text on the file data.txt that only occurs once
+
+For that we will use the sort and uniq commands
+We need sort because uniq only filters adjacent lines so they have to be sorted for uniq to work
+
+ssh bandit8@bandit.labs.overthewire.org -p 2220
+
+sort data.txt | uniq -u
+
+password:
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM

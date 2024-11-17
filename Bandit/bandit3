@@ -1,0 +1,13 @@
+In this level we will have to look for a directory named inhere and look for the password in a hidden file
+
+To look for hidden files we can use ls with the option -a to show all files and we can check the file ...Hiding-From-You is there
+Then we just need to read it's content to get the password
+
+ssh bandit3@bandit.labs.overthewire.org -p 2220
+
+cd inhere
+ls -a
+cat ...Hiding-From-You
+
+password:
+2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ

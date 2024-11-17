@@ -1,0 +1,10 @@
+To solve this level we will need to read the contents of the file data.txt and look for the password next to the word millionth. The problem is the contents are vast and we will surely need to filter out what we will be looking at
+
+We will use more and grep for this one
+
+ssh bandit7@bandit.labs.overthewire.org -p 2220
+
+more data.txt | grep millionth
+
+password:
+dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
