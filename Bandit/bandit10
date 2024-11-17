@@ -1,0 +1,11 @@
+In this level we want to decode the contents of the data.txt which are in a base64 encoding
+
+To solve this level we can use the base64 command with the option to decode -d
+
+ssh bandit10@bandit.labs.overthewire.org -p 2220
+
+base64 -di data.txt
+
+password:
+
+dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr

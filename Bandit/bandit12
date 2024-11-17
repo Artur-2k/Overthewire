@@ -1,0 +1,33 @@
+In this level we will have to decompress a file that has been compressed mulitple times with multiple tools such as tar, gzip and bzip2
+
+The first stage of the file is an hexdump of the compressed file
+Before starting we can use the /temp file to create a temporary working directory using mktemp
+
+ssh bandit12@bandit.labs.overthewire.org -p 2220
+
+
+mktemp -d /temp/XXX
+And then copy data.txt to that new temporary directory and start working there
+
+So first, we can use the command xxd with the option -r to reverse this hexdump and redirect it to a new file so we can inspect that new file.
+
+xxd -r data.txt >data
+file data
+
+And then from here on out we can use the decompressing tools to get the next stage of the data we want to see
+
+commands used:
+
+// for the extionsions needed
+mv data data.tar
+mv data data.gz
+mv data data.bz2
+
+tar -xvf data.tar
+gzip -d data.gz
+bzip2 -d data.bz2
+
+After a while we will see that the file has ASCII text and that we can read the password for the next level
+
+password:
+FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn

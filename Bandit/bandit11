@@ -1,0 +1,15 @@
+In this level we have to decode the contents of data.txt which are rot13 encoded.
+To solve this problem we can use a decoder for rot13 that we can find online or build our own.
+
+ssh bandit11@bandit.labs.overthewire.org -p 2220
+
+
+more data.txt
+Gur cnffjbeq vf 7k16JArUVv5LxVuJfsSVdbbtaHGlw9D4
+
+
+the decoded message:
+The password is 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+password:
+7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4

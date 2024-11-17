@@ -1,0 +1,11 @@
+In this level we are given a ssh private key and the password is stored in the /etc/bandit_pass/bandit14 and can only be read by user bandit14
+That means we have to connect to bandit14 using the private key that was given
+
+checking the home directory we see the private key and using ssh with the flag -i we can connect using the private key
+
+ssh -i ./sshkey.private bandit14@localhost -p 2220
+
+more /etc/bandit_pass/bandit14
+
+password:
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS

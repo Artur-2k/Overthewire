@@ -4,6 +4,7 @@ The contents of data have a lot of non readable characters
 
 To solve this problem we can use the strings command that filters the human-readable contents and piping it's output to grep and find a match for any number of equals to get that FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
 
+ssh bandit9@bandit.labs.overthewire.org -p 2220
 
 
 strings data.txt | grep "=.*"
@@ -24,4 +25,3 @@ Note to self: Regular expression
 	\{ and \}: These curly braces are used for quantifying in regular expressions.
     2,: This means the pattern should match at least 2 occurrences (and it can match more than 2).
 
-	
