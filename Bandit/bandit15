@@ -1,0 +1,13 @@
+This level is similar to the level before but now we have to send the current password through the port 30001 to localhost using SSL/TLS encryption
+
+To do this we can use ncat or openssl for example
+
+ncat --ssl localhost 30001
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+openssl s_client -connect localhost:30001
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+
+password:
+kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx

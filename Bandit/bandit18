@@ -1,0 +1,8 @@
+For this level we are asked to get the password on the file readme on the home directory but the bashrc file is said to log out whenever we try to log in
+
+To solve this problem we can just execute the command through ssh
+
+ssh bandit18@bandit.labs.overthewire.org -p 2220 'strings ~/readme'
+
+password:
+cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8

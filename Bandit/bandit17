@@ -1,0 +1,13 @@
+Having the ssh key we can connect using ssh -i /key/path 
+In this level were told there are 2 files passwords.old and passwords.new and that the password for the next level is the only different line on these files and that it is the one on passwords.new
+
+Using diff
+
+diff passwords.old passwords.new 
+42c42
+< ktfgBvpMzWKR5ENj26IbLGSblgUG9CzB
+---
+> x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
+
+password:
+x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
