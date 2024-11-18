@@ -1,0 +1,21 @@
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
+
+
+the same way as the level before cronjob creates a file every minute with the password for the next level. that file is an encoded message on /tmp so knowing its path we can read its content
+
+if we try to read the password file we won't have permissions but that copy on tmp we can
+
+
+cat /etc/cron.d/cronjob_bandit23
+cat /usr/bin/cronjob_bandit23.sh
+
+
+echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+8ca319486bfbbc3663ea0fbe81326349
+bandit22@bandit:/tmp/tmp.s5Jd0GHheC$ cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
+
+password:
+0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
+
+

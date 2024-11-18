@@ -1,0 +1,16 @@
+There is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21).
+
+To solve this level we can use nc to listen to a specific port and pass to it the password so it waits for the connection on port 12345 and then sends the password to the other side of the connection. 
+
+using echo and nc we can create a deamon that listens to a specific port (12345) and then send it to the background so we can use the setuid binary
+
+echo "0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO" | nc -l -p 12345 &
+
+./suconnect 12345
+
+password:
+EeoULMCra2q0dSkYj561DX7s1CpBuOBt
+
+Note to self:
+
+if running the same commands on the same port shortly after using it before the port used might still be unavailable because it needs to assure every package was successefully delivered and everything was closed and cleaned approprietly

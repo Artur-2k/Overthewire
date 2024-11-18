@@ -1,0 +1,11 @@
+
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
+
+In this level we can go to the cronjob configuration folder and look at the folder for bandit22 and we can see that it executes a script every minute that uses cat on a tmp file with the password from bandit22
+
+*waiting 1minute*
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+
+password:
+tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q

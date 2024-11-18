@@ -1,0 +1,8 @@
+In this level we are given a setuid binary that lets us execute commands as bandit20 and we have to use that binary to extract the password for the next level
+Having bandit20's access to /etc/bandit_pass/bandit20 we can just read the contents and complete the level
+
+./bandit20-do cat /etc/bandit_pass/bandit20
+
+
+password:
+0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
