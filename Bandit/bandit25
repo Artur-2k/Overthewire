@@ -1,0 +1,5 @@
+This level is a gateway for level26 and as soon as we list the contents of our home directory we can se we have an ssh key for level 26
+
+So we just connect using that key
+
+ssh -i ./bandit26.sshkey bandit26@bandit.labs.overthewire.org -p 2220

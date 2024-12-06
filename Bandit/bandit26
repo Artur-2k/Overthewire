@@ -1,0 +1,35 @@
+on this level as soon as we enter the level we are logged out before we can even do anything
+
+we are asked to check what shell they are using as it is not a common shell program and to try to break out of it
+
+to check what shell is being used we can check on the /etc/passwd file
+
+cat /etc/passwd |grep bandit26
+bandit26:x:11026:11026:bandit level 26:/home/bandit26:/usr/bin/showtext
+
+cat /usr/bin/showtext
+#!/bin/sh
+
+export TERM=linux
+
+exec more ~/text.txt
+exit 0
+
+
+here we can see that the shell being used is a showtext script that uses more to show a text prompt with more and then closes
+
+The trick to this one is to think outside the box and just adjust your terminal to a size that uses more pagination feature so it keeps it locked on more and doesnt immidiatly close
+after resizing the window we connect to bandit26 again and now we are still logged in
+now to break out of this script that is stuck on more page1 we can use the vi feature on more (v) and execute a enviorment variable change (the shell) and change it to bash
+
+*resizing*
+v - for vi
+:set shell=/usr/bin/bash
+:shell for a subshell
+and then we break out of that script and can move around and get the next level password with the setuid bin that is given
+
+./bandit27-do cat /etc/bandit_pass/bandit27
+upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB
+
+password:
+upsNCc7vzaRDx6oZC6GiR6ERwe1MowGB

@@ -1,0 +1,22 @@
+we connect the same way as before aswell
+
+git clone ssh://bandi30-git@localhost:2220/home/bandi30-git/repo
+cd repo
+
+cat README.md
+just an epmty file... muahaha
+
+here we will have to look around the repository and look for hints on where the password might be
+
+if we check the tags we see that there is one named secret
+using git show secret
+
+git tag
+secret
+git show secret
+fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy
+
+password:
+fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy
+
+ssh://bandit31-git@localhost:2220/home/bandit31-git/repo

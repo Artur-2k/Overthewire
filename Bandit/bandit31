@@ -1,0 +1,40 @@
+we connect the same way as before aswell
+
+git clone ssh://bandi31-git@localhost:2220/home/bandi31-git/repo
+cd repo
+
+cat README.md
+This time your task is to push a file to the remote repository.
+
+Details:
+    File name: key.txt
+    Content: 'May I come in?'
+    Branch: master
+
+cat .gitignore
+*.txt
+
+In this file were told to push a file named key.txt with some string on its content on the master branch
+
+looking on the repo there is a .gitignore that ignores all .txt files
+so removing the .gitignore and adding a file with the correct content and pushing it should solve the level
+
+git checkout master
+rm .gitignore
+echo "May I come in?" > key.txt
+git add key.txt
+git commit -m"push"
+git push
+remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+remote:
+remote: Well done! Here is the password for the next level:
+remote: 3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
+remote:
+remote: .oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.oOo.
+
+
+
+
+password:
+3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
+

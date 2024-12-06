@@ -1,0 +1,25 @@
+we connect the same way as before aswell
+
+git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo
+cd repo
+
+reading the contents of the readme.md file we can see that there might be other branches
+
+so we can check for branches
+
+git branch -r  (-r -> remote)
+and we see one named dev
+so if we switch to it we can read the contents now and it will get us the password
+
+git checkout origin/dev
+more README.md
+# Bandit Notes
+Some notes for bandit30 of bandit.
+
+## credentials
+
+- username: bandit30
+- password: qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL
+
+password:
+qp30ex3VLz5MDG1n91YowTv4Q8l7CDZL

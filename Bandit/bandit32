@@ -1,0 +1,20 @@
+for this level we just ssh normaly to level32
+
+ssh bandit32@bandit.labs.overthewire.org -p 2220
+
+
+after that we can see that the shell transforms everything to capslock and that makes so we cant run commands
+we can though use expandables to our favor
+
+using the $0 we can call bash and then if we see what are the contents of directory were on we see that the uppershell as a setuid bit on execution
+and if we use
+
+whoami
+bandit33
+
+cat /etc/bandit_pass/bandit33
+tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0
+
+password:
+tQdtbs5D5i2vJwkO8mEyYEyTL8izoeJ0
+

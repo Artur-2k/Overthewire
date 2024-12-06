@@ -1,0 +1,13 @@
+this level is about git and it is said there is a repo at port 2220
+
+to solve this level we just need to clone the repository and see its contents
+
+git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo
+cd repo
+more README
+The password to the next level is: Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
+
+password:
+Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
+
+NOTE TO SELF: localhost:2220 to indicate the port
